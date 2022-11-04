@@ -1,0 +1,6 @@
+header {
+  position: sticky;
+  top: 0;
+  background-color: #123123;
+  min-height: 50px;
+}
