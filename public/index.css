@@ -1,0 +1,20 @@
+header {
+  position: sticky;
+  top: 0;
+  background-color: #713d5f;
+}
+
+header > div > h1 {
+  margin: 0px;
+  padding: 10px;
+}
+
+footer {
+  background-color: #d9d9d9;
+  min-height: 100px;
+}
+
+footer > div > h3 {
+  margin: 25px 0px 0px 0px;
+  padding: 25px;
+}
