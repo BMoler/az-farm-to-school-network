@@ -1,0 +1,21 @@
+.hero-img {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("./img/placeholder.png");
+    width: 100vw;
+    height: 250px;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+.hero-img > h1 {
+    position: relative;
+    top: calc(100% - 75px);
+    left: 15vw;
+    margin: 0px;
+}
+
+.bio-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
