@@ -1,9 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import "./ContactUs.css";
 
 function ContactUs() {
-  //let navigate = useNavigate();
-
   return (
     <>
       <div className="hero-img">
