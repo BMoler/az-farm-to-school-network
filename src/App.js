@@ -9,11 +9,13 @@ import Home from "./pages/Home";
 import Map from "./pages/Map";
 import Resources from "./pages/Resources";
 import Search from "./pages/Search";
+import Navbar from "./components/navbar";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
