@@ -13,6 +13,7 @@
   top: calc(100% - 75px);
   left: 15vw;
   margin: 0px;
+  width: fit-content;
 }
 
 .description-section {

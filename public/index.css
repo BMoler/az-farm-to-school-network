@@ -24,3 +24,23 @@ p {
   font-size: 1.25em;
   line-height: 1.5;
 }
+
+.btn-green {
+  width: 150px;
+  height: 45px;
+  border-radius: 8px;
+  color: #ffffff;
+  border: 2.5px solid #668c3c;
+  background-color: #668c3c;
+  transition: 0.4s;
+}
+
+.btn-green > h2 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.btn-green:hover {
+  background-color: #668c3c11;
+  color: #668c3c;
+}

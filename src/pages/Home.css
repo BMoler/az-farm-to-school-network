@@ -1,0 +1,158 @@
+.hero-img {
+  margin: 0px;
+  padding: 0px;
+  background-image: url("./img/placeholder.png");
+  width: 100vw;
+  height: 350px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.hero-box {
+  position: relative;
+  top: 50px;
+  left: 10vw;
+  background-color: #5d617a44;
+  max-width: 35vw;
+  height: 250px;
+}
+
+.hero-box > h1 {
+  margin: 0px;
+  padding: 15px;
+}
+
+.hero-box > p {
+  margin: 0px;
+  padding: 0px 15px;
+}
+
+.hero-box > button {
+  margin: 15px;
+}
+
+.row-img {
+  background-image: url("./img/placeholder.png");
+  background-position: 50% 50%;
+  width: 40vw;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px 0px 10px 0px;
+}
+
+.text-col {
+  width: 40vw;
+}
+
+.text-col > p {
+  width: calc(100% - 5vw);
+}
+
+.horizontal-line {
+  width: 65vw;
+  height: 2px;
+  margin: 35px;
+  background-color: #668c3c;
+}
+
+.home-center {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+}
+
+.home-center > h1 {
+  margin: 0px;
+}
+
+.list {
+  width: 40vw;
+  height: 250px;
+  list-style-type: none;
+  padding-top: 35px;
+}
+
+.list-long {
+  width: 40vw;
+  list-style-type: none;
+}
+
+.list > li {
+  padding: 16px;
+  background-image: url("./img/list-style-img.svg");
+  background-position: 0px 26px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.list-long > li {
+  padding: 16px;
+  background-image: url("./img/list-style-img.svg");
+  background-position: 0px 26px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.list > li > h1 {
+  margin: 0px;
+}
+
+.list-long > li > h1 {
+  margin: 0px;
+}
+
+.list-row {
+  margin: auto auto auto 100px;
+}
+
+.carousel-holder {
+  position: relative;
+  max-width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.circle-btn {
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+
+.btn-right {
+  position: absolute;
+  top: 35%;
+  right: 100px;
+  background: #668c3c url("./img/right-caret.svg") no-repeat 60% 50%;
+}
+
+.btn-left {
+  position: absolute;
+  top: 35%;
+  left: 100px;
+  background: #668c3c url("./img/left-caret.svg") no-repeat 40% 50%;
+  /* visibility: hidden; */
+}
+
+.carousel-img > img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  margin: 15px 15px 15px 15px;
+}
+
+.reversed {
+  padding-left: 45px;
+  margin: 25px;
+}
