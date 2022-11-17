@@ -1,17 +1,41 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
+import Accordion from './Accordion';
 import "./Faq.css"
 
 function Faq() {
   let navigate = useNavigate();
 
-  const accordionData = {
-    title: 'What are the three pillars of the AZ Farm to School Network?',
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore, hic temporibus velit dicta earum
-      suscipit commodi eum enim atque at? Et perspiciatis dolore iure
-      voluptatem.`
-  };
+  const accordionData = [
+    {
+      title: 'Does Arizona Farm to School Network have internship opportunities?',
+      content: `Yes! Please, visit our Internship Interest Form for further details and to apply!`
+    },
+    {
+      title: 'Does Arizona Farm to School Network have volunteer based opportunties that I can receive credit for?',
+      content: `Yes! We can work with you to find a project based volunteer opportunity that can count towards school credit or class credit.  Visit our Internship Interest Form for further details and to apply!`
+    },
+    {
+      title: 'How do I receive your newsletter?',
+      content: `You can subscribe here. Please, ensure you've also filled out the annual membership form too. You can access previous newsletters here.`
+    },
+    {
+      title: 'Where can I ask questions to the Network for techinal support or advice?',
+      content: `You can add a question to our discussion forum here.`
+    },
+    {
+      title: 'How do I get started with Farm to School?',
+      content: `You can visit our Resource Library for where to get started or visit our Events Calendar to attend one of our Work Group sessions for more direct support.`
+    },
+    {
+      title: 'Do you want someone from Farm to School leadership to present at your conference, workshop or in your class?',
+      content: `Please, reach out to us via email with: date of the event, summary of the event and work group, topic and/or person you're requesting.`
+    },
+    {
+      title: 'Are you applying for a grant and need a letter of support?',
+      content: `Please, reach out to us via email! The link can be found at the bottom of this page.`
+    }
+  ];
 
   const { title, content } = accordionData;
   const [isActive, setIsActive] = useState(false);
@@ -106,19 +130,14 @@ function Faq() {
         Contact Us
       </button>
       </div>
-
-      <React.Fragment>
+      
       <div className="accordion">
-        <div className="accordion-item">
-          <div className="accordion-title"
-            onClick={() => setIsActive(!isActive)}>
-            <div>{title}</div>
-            <div>{isActive ? '-' : '+'}</div>
-          </div>
-        </div>
-        {isActive && <div className="accordion-content">{content}</div>}
+        {accordionData.map(({ title, content }) => (
+          <Accordion title={title} content={content} />
+        ))}
       </div>
-    </React.Fragment>
+
+
 
     </>
   );
