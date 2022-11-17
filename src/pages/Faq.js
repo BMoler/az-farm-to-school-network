@@ -76,6 +76,24 @@ function Faq() {
       >
         Search
       </button>
+
+      <div className="hero-img">
+        <h1>FAQ</h1>
+      </div>
+
+      <div>
+        <h2>For All Questions - </h2>
+        <p>Here you can find answers to all of our most commonly asked questions.</p>
+        <p>If your question is not answered here, please don't hesitate to contact us directly!</p>
+        <button
+        onClick={(e) => {
+          navigate("/contact-us");
+        }}
+      >
+        Contact Us
+      </button>
+      </div>
+
     </>
   );
 }
