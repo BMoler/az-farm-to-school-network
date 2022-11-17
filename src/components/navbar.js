@@ -1,40 +1,60 @@
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import { Tabs, Tab, AppBar, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
+  const routes = ["/", "/Resources", "/FAQ", "/About", "/ContactUs"];
   const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const StyledTab = styled((props: StyledTabProps) => (
-    <Tab disableRipple {...props} />
-  ))(({ theme }) => ({
-    textTransform: "none",
-    fontWeight: theme.typography.fontWeightRegular,
-    fontSize: theme.typography.pxToRem(15),
-    marginRight: theme.spacing(1),
-    color: "rgba(200, 200, 200, 0.7)",
-    "&.Mui-selected": {
-      color: "#333",
-    },
-    "&.Mui-focusVisible": {
-      backgroundColor: "rgba(100, 95, 228, 0.32)",
-    },
-  }));
-
   return (
     <>
-      <Tabs value={value} onChange={handleChange}>
-        <StyledTab label="Home" />
-        <StyledTab label="Resources" />
-        <StyledTab label="FAQ" />
-        <StyledTab label="About" />
-        <StyledTab label="Contact Us" />
-      </Tabs>
+      <AppBar position="sticky" color="background">
+        <Toolbar>
+          <Typography
+            variant="h6"
+            component="div"
+            color="secondary"
+            className="grow"
+          >
+            AZ Farm To School Network
+          </Typography>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            textColor="secondary"
+            indicatorColor="secondary"
+          >
+            <Tab disableRipple label="Home" component={Link} to="/" />
+            <Tab
+              disableRipple
+              label="Resources"
+              component={Link}
+              to="/resources"
+            />
+            <Tab disableRipple label="FAQ" component={Link} to="/faq" />
+            <Tab disableRipple label="About" component={Link} to="/about" />
+            <Tab
+              disableRipple
+              label="Contact Us"
+              component={Link}
+              to="/contact-us"
+            />
+            <Tab disableRipple label="Forum" component={Link} to="/forum" />
+            <Tab
+              disableRipple
+              label="Calendar"
+              component={Link}
+              to="/calendar"
+            />
+            <Tab disableRipple label="Map" component={Link} to="/map" />
+          </Tabs>
+        </Toolbar>
+      </AppBar>
     </>
   );
 };
