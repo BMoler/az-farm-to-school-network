@@ -1,3 +1,4 @@
+//import { useNavigate } from "react-router-dom";
 import "./ContactUs.css";
 
 function ContactUs() {
@@ -27,7 +28,7 @@ function ContactUs() {
           <form action="php/contact.php" method="POST">
             <div className="form-questions">
               <div className="form-item">
-                <label for="first-name">First Name</label>
+                <label htmlFor="first-name">First Name</label>
                 <input
                   aria-required="true"
                   aria-invalid="true"
@@ -35,11 +36,11 @@ function ContactUs() {
                   placeholder="First name"
                   id="first-name"
                   name="first_name"
-                  autocomplete="on"
+                  autoComplete="on"
                 />
               </div>
               <div className="form-item">
-                <label for="last-name">Last Name</label>
+                <label htmlFor="last-name">Last Name</label>
                 <input
                   aria-required="true"
                   aria-invalid="true"
@@ -47,11 +48,11 @@ function ContactUs() {
                   placeholder="Last name"
                   id="last-name"
                   name="last_name"
-                  autocomplete="on"
+                  autoComplete="on"
                 />
               </div>
               <div className="form-item">
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
                 <input
                   aria-required="true"
                   aria-invalid="true"
@@ -59,11 +60,11 @@ function ContactUs() {
                   placeholder="Email"
                   id="email"
                   name="email"
-                  autocomplete="on"
+                  autoComplete="on"
                 />
               </div>
               <div className="form-item">
-                <label for="questions">Questions &amp; Comments</label>
+                <label htmlFor="questions">Questions &amp; Comments</label>
                 <textarea
                   aria-required="true"
                   aria-invalid="true"
@@ -72,8 +73,8 @@ function ContactUs() {
                 />
               </div>
             </div>
-            <button type="submit" className="button">
-              Submit
+            <button type="submit" className="btn-green">
+              <h2>Submit</h2>
             </button>
           </form>
         </div>
