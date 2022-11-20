@@ -1,12 +1,13 @@
+import { Container, Button } from "@mui/material";
 import "./About.css";
 
 function About() {
   return (
     <>
-      <div className="hero-img">
+      <div id="hero-img">
         <h1>About</h1>
       </div>
-
+      <Container>
       <div>
         <h2>Our Mission</h2>
         <p>Farm to School is a national movement that promotes the use of locally- and regionally-grown foods in schools. Farm to School activities and initiatives can include nutrition education in classrooms, farmer visits, signage promoting local foods, serving local foods in the cafeteria, school gardens, and so much more!</p>
@@ -32,12 +33,14 @@ function About() {
         <h3>Workgroup Chairs Bios</h3>
         <p>Workgroup members can choose their level of engagement in any of the four established workgroups to find the support they need for their unique initiatives. Workgroups drive efforts accross pillars of farm to school/pre-school. Think of each as a collaborative space to learn about and coordinate efforts with peers. If you want to get in contact with Workgroup Chairs or Steering Committee members, please email us below.</p>
         <div className="bio-row">
+          
           <div className="bio">
-            <div className="bio-img"></div>
-            <p>Firstname Lastname</p>
-            <p>Position</p>
-            <p>Bio text</p>
+              <div className="bio-img"></div>
+              <p>Firstname Lastname</p>
+              <p>Position</p>
+              <p>Bio text</p>
           </div>
+          
           <div className="bio">
             <div className="bio-img"></div>
             <p>Firstname Lastname</p>
@@ -89,11 +92,14 @@ function About() {
         <hr></hr>
       </div>
 
-      <div>
+      <div className="flex flex-col items-center">
         <h3>Interested in joining a vacant position on the Steering Committee or filling a Workgroup Chair position?</h3>
         <p>You can nominate yourself or colleague below.</p>
-        <button>Apply now</button>
+        <Button variant="contained">
+          Apply now
+        </Button>
       </div>
+    </Container>
     </>
   );
 }
