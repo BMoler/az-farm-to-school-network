@@ -1,0 +1,140 @@
+.footer {
+  margin-top: 40px;
+  width: 100vw;
+  background-color: #0c2b1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px 15px 15px;
+  align-items: center;
+  width: 24%;
+}
+
+.footer-left img {
+  margin: 30px 0px 0px 0px;
+  width: 350px;
+  height: auto;
+}
+
+.footer-left input {
+  position: relative;
+  width: 97.5%;
+  height: 35px;
+  background-color: #0000;
+  border: 2px solid #fff;
+  font-size: 24px;
+  color: #fff;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-title {
+  position: absolute;
+  scale: 1;
+  top: -32px;
+  left: 0px;
+  color: #fff;
+  font-weight: 200;
+  font-size: 26px;
+  transition: 0.3s;
+}
+
+.search-icon {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: #0c2b1c;
+  background-image: url("./search-icon.svg");
+  background-position: center right;
+  background-repeat: no-repeat;
+  transition: ease 0.5s;
+}
+
+.hz-line {
+  width: 95vw;
+  height: 2px;
+  background-color: #fff;
+  margin: 0px;
+}
+
+.footer-bottom {
+  width: calc(100% - 30px);
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  color: #fff;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.footer-bottom > h5 {
+  margin: 0px;
+}
+
+.link-row {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+}
+
+.link-row > h5 {
+  margin: 10px 0 0 0;
+  text-decoration: underline;
+}
+
+.link-row > h5:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.vert-line-small {
+  width: 2px;
+  height: 20px;
+  background-color: #fff;
+  margin: 8px 10px 0px 10px;
+}
+
+.vert-line-large {
+  width: 2px;
+  height: 45%;
+  background-color: #fff;
+  margin: 20px 55px 0px 55px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: top;
+  width: 76%;
+}
+
+.footer-title {
+  color: #fff;
+}
+
+.footer-text {
+  color: #fff;
+  font-size: 16px;
+  margin: 7px 7px 7px 0px;
+}
+
+.footer-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
