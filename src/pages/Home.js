@@ -1,9 +1,67 @@
 //import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./Home.css";
 import placeholderImg from "./img/placeholder.png";
 
 function Home() {
+  const [img_car_index, set_img_car_index] = useState(0);
   //let navigate = useNavigate();
+
+  useEffect(() => {
+    shift_images(175);
+
+    // eslint-disable-next-line
+  }, []);
+
+  const shift_images = (start_value) => {
+    var img_arr = document.getElementsByName("img[]");
+    var pix_value = start_value;
+
+    for (var i = 0; i < img_arr.length; i++) {
+      img_arr[i].style.left = String(pix_value) + "px";
+      pix_value += 230;
+    }
+  };
+
+  const right_btn_click = () => {
+    var temp;
+    var btn;
+    if (img_car_index > -2) {
+      if (img_car_index === 0) {
+        btn = document.getElementById("left-arrow");
+        btn.style.scale = "1";
+      }
+      temp = img_car_index - 1;
+      set_img_car_index(img_car_index - 1);
+      shift_images(temp * 230 + 175);
+    } else {
+      btn = document.getElementById("right-arrow");
+      btn.style.scale = "0";
+      temp = img_car_index - 1;
+      set_img_car_index(img_car_index - 1);
+      shift_images(temp * 230 + 175);
+    }
+  };
+
+  const left_btn_click = () => {
+    var temp;
+    var btn;
+    if (img_car_index < -1) {
+      if (img_car_index === -3) {
+        btn = document.getElementById("right-arrow");
+        btn.style.scale = "1";
+      }
+      temp = img_car_index + 1;
+      set_img_car_index(img_car_index + 1);
+      shift_images(temp * 230 + 175);
+    } else {
+      btn = document.getElementById("left-arrow");
+      btn.style.scale = "0";
+      temp = img_car_index + 1;
+      set_img_car_index(img_car_index + 1);
+      shift_images(temp * 230 + 175);
+    }
+  };
 
   return (
     <>
@@ -77,29 +135,49 @@ function Home() {
 
       <div className="carousel-holder">
         <div className="left-btn">
-          <button className="circle-btn btn-left" />
+          <button
+            className="circle-btn btn-left"
+            onClick={() => {
+              left_btn_click();
+            }}
+            id="left-arrow"
+          />
         </div>
         <div className="right-btn">
-          <button className="circle-btn btn-right" />
+          <button
+            className="circle-btn btn-right"
+            onClick={() => {
+              right_btn_click();
+            }}
+            id="right-arrow"
+          />
         </div>
         <div className="carousel-img">
-          <img src={placeholderImg} alt="placehlder img" />
+          <img src={placeholderImg} alt="placehlder img" name="img[]" />
         </div>
         <div className="carousel-img">
-          <img src={placeholderImg} alt="placehlder img" />
+          <img src={placeholderImg} alt="placehlder img" name="img[]" />
         </div>
         <div className="carousel-img">
-          <img src={placeholderImg} alt="placehlder img" />
+          <img src={placeholderImg} alt="placehlder img" name="img[]" />
         </div>
         <div className="carousel-img">
-          <img src={placeholderImg} alt="placehlder img" />
+          <img src={placeholderImg} alt="placehlder img" name="img[]" />
         </div>
         <div className="carousel-img">
-          <img src={placeholderImg} alt="placehlder img" />
+          <img src={placeholderImg} alt="placehlder img" name="img[]" />
         </div>
         <div className="carousel-img">
-          <img src={placeholderImg} alt="placehlder img" />
+          <img src={placeholderImg} alt="placehlder img" name="img[]" />
         </div>
+        <div className="carousel-img">
+          <img src={placeholderImg} alt="placehlder img" name="img[]" />
+        </div>
+        <div className="carousel-img">
+          <img src={placeholderImg} alt="placehlder img" name="img[]" />
+        </div>
+
+        <div className="overlay" />
       </div>
       <div className="home-page">
         <div className="horizontal-line" />

@@ -10,6 +10,7 @@ import Map from "./pages/Map";
 import Resources from "./pages/Resources";
 import Search from "./pages/Search";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<Home />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
