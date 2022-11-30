@@ -1,16 +1,33 @@
 import { Tabs, Tab, AppBar, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+const routes = [
+  "/",
+  "/resources",
+  "/faq",
+  "/about",
+  "/contact-us",
+  "/forum",
+  "/calendar",
+  "/map",
+];
 
 const Navbar = (props) => {
-  const [value, setValue] = useState(0);
+  const location = useLocation();
+  const [value, setValue] = useState(routes.indexOf(location.pathname));
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   return (
-    <AppBar position="sticky" color="background">
+    <AppBar
+      position="sticky"
+      color="background"
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    >
       <Toolbar>
         <Typography
           variant="h6"
@@ -26,24 +43,24 @@ const Navbar = (props) => {
           textColor="secondary"
           indicatorColor="secondary"
         >
-          <Tab disableRipple label="Home" component={Link} to="/" />
+          <Tab disableRipple label="Home" component={Link} to={routes[0]} />
           <Tab
             disableRipple
             label="Resources"
             component={Link}
-            to="/resources"
+            to={routes[1]}
           />
-          <Tab disableRipple label="FAQ" component={Link} to="/faq" />
-          <Tab disableRipple label="About" component={Link} to="/about" />
+          <Tab disableRipple label="FAQ" component={Link} to={routes[2]} />
+          <Tab disableRipple label="About" component={Link} to={routes[3]} />
           <Tab
             disableRipple
             label="Contact Us"
             component={Link}
-            to="/contact-us"
+            to={routes[4]}
           />
-          <Tab disableRipple label="Forum" component={Link} to="/forum" />
-          <Tab disableRipple label="Calendar" component={Link} to="/calendar" />
-          <Tab disableRipple label="Map" component={Link} to="/map" />
+          <Tab disableRipple label="Forum" component={Link} to={routes[5]} />
+          <Tab disableRipple label="Calendar" component={Link} to={routes[6]} />
+          <Tab disableRipple label="Map" component={Link} to={routes[7]} />
         </Tabs>
       </Toolbar>
     </AppBar>
