@@ -23,7 +23,11 @@ const Navbar = (props) => {
   };
 
   return (
-    <AppBar position="sticky" color="background">
+    <AppBar
+      position="sticky"
+      color="background"
+      sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    >
       <Toolbar>
         <Typography
           variant="h6"
