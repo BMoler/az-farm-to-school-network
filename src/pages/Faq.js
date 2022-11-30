@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
-import Accordion from './Accordion';
+import Accordion from '../components/Accordion';
 import "./Faq.css"
 
 function Faq() {
